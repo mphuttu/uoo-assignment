@@ -13,19 +13,19 @@ server:
      password: root
      initialize: true
      continue-on-error: true
-    sleuth:
+   sleuth:
        enabled: false
      
-     zipkin:
-       storage:
-         type: mysql
+ zipkin:
+   storage:
+     type: mysql
      
-     logging:
-       level:
-         ROOT: INFO
+ logging:
+   level:
+     ROOT: INFO
      
-     eureka:
-       client:
-         serviceUrl:
-           defaultZone: http://localhost:8761/eureka/
+ eureka:
+   client:
+     serviceUrl:
+       defaultZone: http://localhost:8761/eureka/
      
