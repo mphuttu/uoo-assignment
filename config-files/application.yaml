@@ -1,31 +1,26 @@
-server:
+server: 
   port: 9999
- 
- spring:
-   rabbitmq:
-     port: 5672
-     host: localhost
-   datasource:
-     schema: classpath:/mysql.sql
-     url: jdbc:mysql://${MYSQL_HOST:localhost}/zipkin?autoReconnect=true
-     driver-class-name: com.mysql.cj.jdbc.Driver 
-     username: root
-     password: root
-     initialize: true
-     continue-on-error: true
-   sleuth:
-       enabled: false
-     
- zipkin:
-   storage:
-     type: mysql
-     
- logging:
-   level:
-     ROOT: INFO
-     
- eureka:
-   client:
-     serviceUrl:
-       defaultZone: http://localhost:8761/eureka/
-     
+spring: 
+  datasource: 
+    continue-on-error: true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    eureka: 
+      client: 
+        serviceUrl: 
+          defaultZone: "http://localhost:8761/eureka/"
+    initialize: true
+    logging: 
+      level: 
+        ROOT: INFO
+    password: root
+    schema: "classpath:/mysql.sql"
+    sleuth: 
+      enabled: false
+    url: "jdbc:mysql://${MYSQL_HOST:localhost}/zipkin?autoReconnect=true"
+    username: root
+    zipkin: 
+      storage: 
+        type: mysql
+  rabbitmq: 
+    host: localhost
+    port: 5672
