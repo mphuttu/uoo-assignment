@@ -1,1 +1,14 @@
-server:  port: 8761eureka:  instance:    hostname: localhost    health-check-url-path: /actuator/health    status-page-url-path: /actuator/info  client:    registerWithEureka: false    fetchRegistry: falselogging:  level:     com.netflix.discovery: 'ON'     org.springframework.cloud: 'DEBUG'
+eureka: 
+  client: 
+    fetchRegistry: false
+    registerWithEureka: false
+  instance: 
+    health-check-url-path: /actuator/health
+    hostname: localhost
+    status-page-url-path: /actuator/info
+logging: 
+  level: 
+    com.netflix.discovery: "ON"
+    org.springframework.cloud: DEBUG
+server: 
+  port: 8761
