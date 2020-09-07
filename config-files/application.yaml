@@ -16,7 +16,7 @@ spring:
     schema: "classpath:/mysql.sql"
     sleuth: 
       enabled: false
-    url: "jdbc:mysql://${MYSQL_HOST:localhost}/zipkin?autoReconnect=true"
+    url: "jdbc:mysql://${MYSQL_HOST:localhost}/zipkin?autoReconnect=true&useSSL=false"
     username: root
     zipkin: 
       storage: 
