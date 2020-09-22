@@ -1,6 +1,11 @@
 server:
   port: 50115
 spring:
+  boot:
+    admin:
+      discovery:
+        converter:
+          health-endpoint-path:  /actuator/health
   rabbitmq:
     host: localhost
     port: 5672
