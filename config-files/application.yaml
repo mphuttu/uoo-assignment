@@ -1,5 +1,5 @@
 server:
-  port: 50105
+  port: 50115
 spring:
   rabbitmq:
     host: localhost
